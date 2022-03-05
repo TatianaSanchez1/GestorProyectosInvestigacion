@@ -13,3 +13,117 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor_general {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.caja_fondo {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background-color: rgba(18, 56, 94, 0.774);
+}
+
+.caja_fondo div {
+    margin: 100px 40px;
+    color: #ffffff;
+    transition: all 500ms;
+}
+
+.caja_fondo div p,
+.caja_fondo div button {
+    margin-top: 30px;
+}
+
+.caja_fondo div h3 {
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja_fondo button {
+    padding: 10px 40px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff;
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja_fondo button:hover {
+    background-color: #ffffff;
+    color: rgb(18, 56, 94);
+}
+
+
+/*Formularios*/
+
+.contenedor_login-registro {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+}
+
+.contenedor_login-registro form {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #ffffff;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.contenedor_login-registro form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(18, 56, 94);
+}
+
+.contenedor_login-registro form input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedor_login-registro form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background-color: rgb(18, 56, 94);
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+
+.formulario_login {
+    opacity: 1;
+    display: block;
+}
+
+.formulario_registro {
+    display: none;
+}
