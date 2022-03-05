@@ -127,3 +127,31 @@ main {
 .formulario_registro {
     display: none;
 }
+
+
+/* Diseño Responsive */
+
+@media screen and (max-width:850px) {
+    main {
+        margin-top: 50px;
+    }
+    .caja_fondo {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .caja_fondo div {
+        margin: 0px;
+        position: absolute;
+    }
+    /* Formulario */
+    .contenedor_login-registro {
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+    .contenedor_login-registro form {
+        position: relative;
+    }
+}
