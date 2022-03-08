@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -11,45 +10,113 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .contenedor_formulario {
     width: 320px;
     height: 420px;
-    background-color: #000000;
+    background-color: rgba(34, 34, 59, 0.966);
     color: #ffffff;
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-    padding: 70px 30px;
+    padding-top: 0px;
+    padding-bottom: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+}
+
+.contenedor_formulario i {
+    z-index: 1;
+    font-size: 80px;
+    color: #ccc;
+    margin-top: -200px;
+    margin-bottom: 40px;
+    left: 50%;
+}
+
+h2 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.formulario {
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formulario label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+}
+
+.formulario .usuario-input {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+    transition: 0.5s;
+    transition-property: border-bottom;
+}
+
+.formulario .usuario-input:hover,
+.formulario .usuario-input:focus,
+.formulario .usuario-input:active {
+    border-bottom: solid 5px #ffffff;
+}
+
+.formulario .usuario-input {
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.formulario input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: 0.5s;
+    transition-property: background-color;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #C9ADA7;
+}
+
+.formulario a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: darkgrey;
+    display: block;
+    margin: 5px;
+    text-align: left;
+}
+
+.formulario a:hover {
+    color: #ffffff;
+    font-weight: 600;
 }
 
 
 /* Diseño Responsive */
-
-@media screen and (max-width:850px) {
-    main {
-        margin-top: 50px;
-    }
-    .caja_fondo {
-        max-width: 350px;
-        height: 300px;
-        flex-direction: column;
-        margin: auto;
-    }
-    .caja_fondo div {
-        margin: 0px;
-        position: absolute;
-    }
-    /* Formulario */
-    .contenedor_login-registro {
-        top: -10px;
-        left: -5px;
-        margin: auto;
-    }
-    .contenedor_login-registro form {
-        position: relative;
-    }
-}
