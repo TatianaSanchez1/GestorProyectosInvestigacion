@@ -5,6 +5,7 @@
 
     $usuario = $_POST['usuario_inicioSesion'];
     $contrasena = $_POST['contrasena_inicioSesion'];
+    
     $contrasena = hash('sha512', $contrasena);
 
     $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$usuario' and contrasena = '$contrasena' ");
