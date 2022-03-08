@@ -41,7 +41,7 @@
                 <!-- Login -->
                 <form action = "PHP/inicioSesionUsuario_BackEnd.php" method = "POST" class="formulario_login">
                     <h2>Iniciar Sesion</h2>
-                    <input type="text" placeholder="Correo Electrónico" name="correo_inicioSesion">
+                    <input type="text" placeholder="Usuario" name="usuario_inicioSesion">
                     <input type="password" placeholder="Contraseña" name="contrasena_inicioSesion">
                     <button>Entrar</button>
                 </form>

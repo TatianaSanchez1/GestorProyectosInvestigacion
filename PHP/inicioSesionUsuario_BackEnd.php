@@ -3,14 +3,14 @@
 
     include 'Conexion_BackEnd.php';
 
-    $correo = $_POST['correo_inicioSesion'];
+    $usuario = $_POST['usuario_inicioSesion'];
     $contrasena = $_POST['contrasena_inicioSesion'];
     $contrasena = hash('sha512', $contrasena);
 
-    $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo = '$correo' and contrasena = '$contrasena' ");
+    $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$usuario' and contrasena = '$contrasena' ");
 
     if (mysqli_num_rows($validar_login) > 0) {
-        $_SESSION['usuario'] = $correo;
+        $_SESSION['usuario'] = $usuario;
         header("location: ../bienvenida.php");
         exit();
     } else {
