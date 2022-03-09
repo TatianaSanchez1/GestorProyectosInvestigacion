@@ -51,7 +51,7 @@ header {
     background-color: rgb(73, 73, 110);
     padding-top: 30px;
     width: 250px;
-    height: calc(100% - 5.5%);
+    height: calc(100% - 5%);
     transition: 0.8s;
     transition-property: left;
     overflow-y: auto;
@@ -141,7 +141,7 @@ label #sidebar_btn:hover {
     background: url(../img/background1.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-    height: calc(100% - 7.5%);
+    height: calc(100% - 7%);
     transition: 0.8s;
     overflow-y: auto;
 }
@@ -176,10 +176,15 @@ label #sidebar_btn:hover {
     #sidebar_btn {
         display: none;
     }
+    .contenedor_general {
+        display: flex;
+        margin-top: 70px;
+        height: calc(100vh - 70px);
+        position: relative;
+    }
     .contenido {
-        margin-left: 0;
-        margin-top: 0;
-        width: 100%;
+        flex: 1;
+        height: calc(100% - 7%);
         padding: 10px 20px;
         transition: 0.3s;
     }
