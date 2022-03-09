@@ -96,11 +96,12 @@ h2 {
     margin-bottom: 20px;
     text-align: center;
     transition: 0.5s;
-    transition-property: background-color;
+    transition-property: background-color, outline;
 }
 
 .formulario input[type="submit"]:hover {
     background-color: #C9ADA7;
+    outline: solid 2px rgb(34, 34, 59);
 }
 
 .formulario a {
