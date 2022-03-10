@@ -94,6 +94,10 @@ header {
     background-color: rgb(111, 118, 206);
 }
 
+.sidebar #selected {
+    background-color: rgb(111, 118, 206);
+}
+
 .sidebar i {
     padding-right: 10px;
 }

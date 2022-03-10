@@ -75,7 +75,7 @@ if (!isset($_SESSION['usuario'])) {
                     <img src="img/perfil.jpg" alt="foto de perfil" class="profile-img">
                     <h4>Administrador</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-circle-plus"></i><span>Ingresar Proyecto</span></a>
+                <a href="#" id="selected"><i class="fa-solid fa-circle-plus"></i><span>Ingresar Proyecto</span></a>
                 <a href="#"><i class="fa-solid fa-pen-to-square"></i><span>Actualizar</span></a>
                 <a href="#"><i class="fa-solid fa-ban"></i><span>Eliminar</span></a>
                 <a href="#"><i class="fa-solid fa-list"></i><span>Ver lista</span></a>
