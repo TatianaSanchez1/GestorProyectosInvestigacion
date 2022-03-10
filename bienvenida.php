@@ -88,7 +88,8 @@ if (!isset($_SESSION['usuario'])) {
                     <form action="">
                         <h2>Ingresar proyecto nuevo</h2>
                         <div class="input">
-                            <label for="" class="form_label">Nombre del proyecto:</label>
+                            <label for="" class="form_label">Nombre del proyecto:
+                            </label>
                             <input type="text" name="nombre" id="" class="form_input">
                         </div>
 
