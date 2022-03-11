@@ -2,7 +2,7 @@
     session_start();
 
     if (isset($_SESSION['usuario'])) {
-        header("location: bienvenida.php");
+        header("location: ingresarProyecto.php");
     }
 ?>
 
@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor de Proyectos de Investigació</title>
+    <title>Gestor de Proyectos de Investigación</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -40,7 +40,7 @@
 
             <input type="submit" value="Entrar">
 
-            <a href="#">Has perdido tu contraseña?</a>
+            <a href="recuperarContrasena.html">Has perdido tu contraseña?</a>
         </form>
     </div>
 </body>

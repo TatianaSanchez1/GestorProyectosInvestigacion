@@ -12,7 +12,7 @@
 
     if (mysqli_num_rows($validar_login) > 0) {
         $_SESSION['usuario'] = $usuario;
-        header("location: ../bienvenida.php");
+        header("location: ../ingresarProyecto.php");
         exit();
     } else {
         echo '

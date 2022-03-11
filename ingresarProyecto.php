@@ -29,9 +29,10 @@ $guardar = $conexion->query($directores);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor de Proyectos de Investigacion</title>
+    <title>Gestor de Proyectos de Investigación</title>
 
-    <link rel="stylesheet" href="CSS/styleBienvenida.css">
+    <link rel="stylesheet" href="CSS/stylePlantillaBienvenida.css">
+    <link rel="stylesheet" href="CSS/styleIngresarProyecto.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -66,10 +67,10 @@ $guardar = $conexion->query($directores);
 
 
         <div class="responsive_nav_items">
-            <a href="#"><i class="fa-solid fa-circle-plus"></i><span>Ingresar Proyecto</span></a>
+            <a href="ingresarProyecto.php"><i class="fa-solid fa-circle-plus"></i><span>Ingresar Proyecto</span></a>
             <a href="#"><i class="fa-solid fa-pen-to-square"></i><span>Actualizar</span></a>
-            <a href="#"><i class="fa-solid fa-ban"></i><span>Eliminar</span></a>
-            <a href="#"><i class="fa-solid fa-list"></i><span>Ver lista</span></a>
+            <a href="listarProyectos.php"><i class="fa-solid fa-ban"></i><span>Eliminar</span></a>
+            <a href="listarProyectos.php"><i class="fa-solid fa-list"></i><span>Ver lista</span></a>
             <a href="#"><i class="fa-solid fa-info-circle"></i><span>About</span></a>
             <a href="#"><i class="fa-solid fa-sliders-h"></i><span>Settings</span></a>
         </div>
@@ -84,8 +85,8 @@ $guardar = $conexion->query($directores);
             </div>
             <a href="#" id="selected"><i class="fa-solid fa-circle-plus"></i><span>Ingresar Proyecto</span></a>
             <a href="#"><i class="fa-solid fa-pen-to-square"></i><span>Actualizar</span></a>
-            <a href="#"><i class="fa-solid fa-ban"></i><span>Eliminar</span></a>
-            <a href="#"><i class="fa-solid fa-list"></i><span>Ver lista</span></a>
+            <a href="listarProyectos.php"><i class="fa-solid fa-ban"></i><span>Eliminar</span></a>
+            <a href="listarProyectos.php"><i class="fa-solid fa-list"></i><span>Ver lista</span></a>
             <a href="#"><i class="fa-solid fa-info-circle"></i><span>About</span></a>
             <a href="#"><i class="fa-solid fa-sliders-h"></i><span>Settings</span></a>
         </div>
