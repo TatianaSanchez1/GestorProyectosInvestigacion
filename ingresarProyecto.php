@@ -83,9 +83,9 @@ $guardar = $conexion->query($directores);
                 <img src="img/perfil.jpg" alt="foto de perfil" class="profile-img">
                 <h4>Administrador</h4>
             </div>
-            <a href="#" id="selected"><i class="fa-solid fa-circle-plus"></i><span>Ingresar Proyecto</span></a>
+            <a href="ingresarProyecto.php" id="selected"><i class="fa-solid fa-circle-plus"></i><span>Ingresar Proyecto</span></a>
             <a href="#"><i class="fa-solid fa-pen-to-square"></i><span>Actualizar</span></a>
-            <a href="listarProyectos.php"><i class="fa-solid fa-ban"></i><span>Eliminar</span></a>
+            <a href="buscarProyecto.php"><i class="fa-solid fa-ban"></i><span>Eliminar</span></a>
             <a href="listarProyectos.php"><i class="fa-solid fa-list"></i><span>Ver lista</span></a>
             <a href="#"><i class="fa-solid fa-info-circle"></i><span>About</span></a>
             <a href="#"><i class="fa-solid fa-sliders-h"></i><span>Settings</span></a>

@@ -24,7 +24,7 @@ if (mysqli_num_rows($verificar_idProyecto) > 0) {
     echo '
             <script>
                 alert("Este codigo de proyecto ya está registrado.");
-                window.location = "../bienvenida.php";
+                window.location = "../ingresarProyecto.php";
             </script>
         ';
     exit();
@@ -36,13 +36,13 @@ if ($ejecutar) {
     echo '
                 <script> 
                     alert("Proyecto almacenado correctamente");
-                    window.location = "../bienvenida.php";
+                    window.location = "../ingresarProyecto.php";
                 </script>';
 } else {
     echo '
                 <script> 
                     alert("Intentalo de nuevo. Proyecto no almacenado");
-                    window.location = "../bienvenida.php";
+                    window.location = "../ingresarProyecto.php";
                 </script>';
 }
 

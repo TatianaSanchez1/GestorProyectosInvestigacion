@@ -1,0 +1,50 @@
+.contenido .tabla-listarProyectos .busqueda {
+    display: block;
+    box-sizing: border-box;
+    background-color: rgb(243, 241, 241);
+    color: rgb(42, 42, 42);
+    padding: 10px 20px;
+    width: 100%;
+    margin: auto;
+    outline: 1px solid rgb(42, 42, 42);
+    border: none;
+    font-size: 16px;
+}
+
+.contenido .tabla-listarProyectos {
+    align-items: center;
+    align-content: space-between;
+}
+
+.contenido .tabla-listarProyectos .btn_buscar,
+.contenido .tabla-listarProyectos .btn_limpiar {
+    display: absolute;
+    box-sizing: border-box;
+    background-color: rgb(17, 82, 22);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: 110px;
+    transition: 0.3s;
+    transition-property: background-color;
+}
+
+.contenido .tabla-listarProyectos .btn_limpiar {
+    background-color: rgb(144, 32, 32);
+}
+
+.contenido .tabla-listarProyectos .btn_buscar:hover {
+    background-color: rgb(33, 143, 42);
+}
+
+.contenido .tabla-listarProyectos .btn_limpiar:hover {
+    background-color: rgb(184, 37, 37);
+}

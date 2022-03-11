@@ -1,13 +1,20 @@
 <?php
-
 include 'PHP/Conexion_BackEnd.php';
 
 #Consulta
+$where = "";
 
-$consulta = "SELECT * FROM proyectos";
+if (!empty($_POST)) {   
+    $valor = $_POST['buscar'];
+    $limpiar = $_POST['limpiar'];
+
+    if (!empty($valor)) {
+        $where = "WHERE id_proyecto LIKE '%$valor%'";
+    }
+}
+
+$consulta = "SELECT * FROM proyectos $where";
 $guardar = $conexion->query($consulta);
-
-
 ?>
 
 
@@ -22,6 +29,7 @@ $guardar = $conexion->query($consulta);
 
     <link rel="stylesheet" href="CSS/stylePlantillaBienvenida.css">
     <link rel="stylesheet" href="CSS/styleTablaProyectos.css">
+    <link rel="stylesheet" href="CSS/styleBuscarProyecto.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -74,8 +82,8 @@ $guardar = $conexion->query($consulta);
             </div>
             <a href="ingresarProyecto.php"><i class="fa-solid fa-circle-plus"></i><span>Ingresar Proyecto</span></a>
             <a href="#"><i class="fa-solid fa-pen-to-square"></i><span>Actualizar</span></a>
-            <a href="#"><i class="fa-solid fa-ban"></i><span>Eliminar</span></a>
-            <a href="listarProyectos.html" id="selected"><i class="fa-solid fa-list"></i><span>Ver lista</span></a>
+            <a href="buscarProyecto.php" id="selected"><i class="fa-solid fa-ban"></i><span>Eliminar</span></a>
+            <a href="listarProyectos.php"><i class="fa-solid fa-list"></i><span>Ver lista</span></a>
             <a href="#"><i class="fa-solid fa-info-circle"></i><span>About</span></a>
             <a href="#"><i class="fa-solid fa-sliders-h"></i><span>Settings</span></a>
         </div>
@@ -83,8 +91,17 @@ $guardar = $conexion->query($consulta);
         <div class="contenido">
             <div class="tabla-listarProyectos">
                 <div class="titulo-tabla">
-                    <h2>Tabla de proyectos</h2>
+                    <h2>Eliminar proyecto</h2>
                 </div>
+
+                <!-- Buscar proyecto -->
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                    <input type="text" name="buscar" placeholder="Busqueda por codigo de proyecto" class="busqueda">
+                    <br>
+                    <input type="submit" name="Buscar" value="Buscar" class="btn_buscar">
+                    <input type="submit" name="limpiar" value="Limpiar Busqueda" class="btn_limpiar">
+
+                </form>
 
                 <div class="tabla-responsive table-hover" id="tabla-consulta">
                     <table class="table">
@@ -112,7 +129,7 @@ $guardar = $conexion->query($consulta);
                                     <td class="table-content"><?php echo $row['fecha_inicial'] ?></td>
                                     <td class="table-content"><?php echo $row['fecha_final'] ?></td>
                                     <td class="table-content"><?php echo $row['director'] ?></td>
-                                    <td class="table-content"> <a href=""><i class="fa-solid fa-pencil"></i>Editar</a> - <a href=""><i class="fa-solid fa-delete-left" ></i>Eliminar</a></td>
+                                    <td class="table-content"><a href=""><i class="fa-solid fa-delete-left"></i>Eliminar</a></td>
                                 </tr>
 
                             <?php } ?>
