@@ -1,7 +1,8 @@
 <?php
 
-    $conexion = mysqli_connect("localhost", "root", "", "ingreso_registro_db");
+    $conexion = mysqli_connect("localhost", "root", "", "proyectos_investigacion");
 
+    
     /*
     if ($conexion) {
         echo 'conectado exitosamente a la base de datos';
@@ -9,5 +10,6 @@
         echo 'no se ha podido conectar a la base de datos';
     }
     */
+    
 
 ?>
