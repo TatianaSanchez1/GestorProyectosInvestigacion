@@ -19,6 +19,44 @@ include 'PHP/Conexion_BackEnd.php';
 
 $directores = "SELECT * FROM directores";
 $guardar = $conexion->query($directores);
+
+# Consulta para extraer los datos
+
+$id = $_GET['id_proyecto'];
+$modificar = "SELECT * FROM proyectos WHERE id_proyecto = $id";
+
+$consulta = $conexion->query($modificar);
+$dato = $consulta->fetch_array();
+
+if (isset($_POST['actualizar'])) {
+    $id = $_POST['id_proyecto'];
+    $nombre = $conexion->real_escape_string($_POST['nombre']);
+    $descripcion = $conexion->real_escape_string($_POST['descripcion']);
+    $obj_generales = $conexion->real_escape_string($_POST['objGenerales']);
+    $obj_especificos = $conexion->real_escape_string($_POST['objEspecificos']);
+    $presupuesto = $conexion->real_escape_string($_POST['presupuesto']);
+    $fecha_inicial = $conexion->real_escape_string($_POST['fechaInicial']);
+    $fecha_final = $conexion->real_escape_string($_POST['fechaFinal']);
+    $director = $conexion->real_escape_string($_POST['director']);
+
+    //realizar consulta para actualizar los datos
+
+    $actualiza = "UPDATE proyectos SET nombre = '$nombre', descripcion = '$descripcion', obj_generales = '$obj_generales', obj_especificos = '$obj_especificos', presupuesto = '$presupuesto', fecha_inicial = '$fecha_final', fecha_final = '$fecha_final', director = '$director' WHERE id_proyecto = '$id'";
+
+    $actualizaDatos = $conexion->query($actualiza);
+
+    if ($actualizaDatos > 0) {
+        echo '
+                <script> 
+                    alert("Proyecto almacenado correctamente");
+                    window.location = "buscar_actualizarProyecto.php";
+                </script>
+            ';
+    }
+}
+
+$conexion->close();
+
 ?>
 
 
@@ -83,8 +121,8 @@ $guardar = $conexion->query($directores);
                 <img src="img/perfil.jpg" alt="foto de perfil" class="profile-img">
                 <h4>Administrador</h4>
             </div>
-            <a href="ingresarProyecto.php" id="selected"><i class="fa-solid fa-circle-plus"></i><span>Ingresar Proyecto</span></a>
-            <a href="buscar_actualizarProyecto.php"><i class="fa-solid fa-pen-to-square"></i><span>Actualizar</span></a>
+            <a href="ingresarProyecto.php"><i class="fa-solid fa-circle-plus"></i><span>Ingresar Proyecto</span></a>
+            <a href="buscar_actualizarProyecto.php" id="selected"><i class="fa-solid fa-pen-to-square"></i><span>Actualizar</span></a>
             <a href="buscar_eliminarProyecto.php"><i class="fa-solid fa-ban"></i><span>Eliminar</span></a>
             <a href="listarProyectos.php"><i class="fa-solid fa-list"></i><span>Ver lista</span></a>
             <a href="#"><i class="fa-solid fa-info-circle"></i><span>About</span></a>
@@ -93,38 +131,38 @@ $guardar = $conexion->query($directores);
 
         <div class="contenido">
             <div class="formulario">
-                <form action="PHP/guardarProyecto_BackEnd.php" method="POST">
-                    <h2>Ingresar proyecto nuevo</h2>
+                <form action="" method="POST">
+                    <h2>Actualizar Proyecto</h2>
                     <div class="input">
                         <label for="" class="form_label">Id:</label>
-                        <input type="text" name="id_proyecto" id="" class="form_input datos id_proyecto">
+                        <input type="text" name="id_proyecto" value="<?php echo $dato['id_proyecto'] ?>" id="" class="form_input datos id_proyecto">
 
                         <label for="" class="form_label">Nombre del proyecto:</label>
-                        <input type="text" name="nombre" id="" class="form_input datos">
+                        <input type="text" name="nombre" value="<?php echo $dato['nombre'] ?>" id="" class="form_input datos">
                     </div>
 
                     <div class="input">
                         <label for="" class="form_label">Descripcion</label>
-                        <textarea name="descripcion" class="text_area" id="" cols="30" rows="10"></textarea>
+                        <textarea name="descripcion" class="text_area" id="" cols="30" rows="10"><?php echo $dato['descripcion'] ?></textarea>
                     </div>
                     <div class="input">
                         <label for="" class="form_label">Objetivos Generales</label>
-                        <textarea name="objGenerales" class="text_area" id="" cols="30" rows="10"></textarea>
+                        <textarea name="objGenerales" class="text_area" id="" cols="30" rows="10"><?php echo $dato['obj_generales'] ?></textarea>
                     </div>
                     <div class="input">
                         <label for="" class="form_label">Objetivos Especificos</label>
-                        <textarea name="objEspecificos" class="text_area" id="" cols="30" rows="10"></textarea>
+                        <textarea name="objEspecificos" class="text_area" id="" cols="30" rows="10"><?php echo $dato['obj_especificos'] ?></textarea>
                     </div>
                     <div class="input">
                         <label for="" class="form_label">Presupuesto:</label>
-                        <input type="number" min="0" name="presupuesto" id="" class="form_input">
+                        <input type="number" min="0" name="presupuesto" value="<?php echo $dato['presupuesto'] ?>" id="" class="form_input">
                     </div>
                     <div class="input">
                         <label for="" class="form_label">Fecha inicial:</label>
-                        <input type="date" name="fechaInicial" id="" class="form_input fecha fecha_inicial">
+                        <input type="date" name="fechaInicial" value="<?php echo $dato['fecha_inicial'] ?>" id="" class="form_input fecha fecha_inicial">
 
                         <label for="" class="form_label">Fecha final:</label>
-                        <input type="date" name="fechaFinal" id="" class="form_input fecha">
+                        <input type="date" name="fechaFinal" value="<?php echo $dato['fecha_final'] ?>" id="" class="form_input fecha">
                     </div>
 
                     <div class="input">
@@ -141,7 +179,7 @@ $guardar = $conexion->query($directores);
 
                     </div>
                     <center>
-                        <input type="submit" value="Guardar" class="boton">
+                        <input type="submit" value="Guardar" class="boton" name="actualizar">
                     </center>
                 </form>
             </div>
