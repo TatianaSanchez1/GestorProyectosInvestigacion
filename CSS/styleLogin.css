@@ -1,123 +1,122 @@
-* {
-    margin: 0;
-    padding: 0;
+.contenedor_general .contenido .tabla-listarProyectos {
     box-sizing: border-box;
-    text-decoration: none;
+    padding: 20px 50px 50px 50px;
+    background-color: #ffffff;
+    display: flex;
+    display: block;
 }
 
-body {
-    background-image: url(../img/background1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.contenedor_formulario {
-    width: 320px;
-    height: 420px;
-    background-color: rgba(34, 34, 59, 0.966);
-    color: #ffffff;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding-top: 0px;
-    padding-bottom: 70px;
-    padding-left: 30px;
-    padding-right: 30px;
+.contenedor_general .contenido .tabla-listarProyectos .titulo-tabla {
     text-align: center;
-}
-
-.contenedor_formulario i {
-    z-index: 1;
-    font-size: 80px;
-    color: #ccc;
-    margin-top: -200px;
-    margin-bottom: 40px;
-    left: 50%;
-}
-
-h2 {
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 1px;
+    color: rgb(34, 34, 59);
+    margin: 30px 0 50px 0;
     font-size: 30px;
 }
 
-.formulario {
-    z-index: 1;
-    font-family: 'Roboto', sans-serif;
+.table {
+    background-color: #fff;
+    border-radius: 10px;
+    border-collapse: collapse;
+    margin: auto;
+    padding: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
 }
 
-.formulario label {
-    margin: 0;
-    padding: 0;
+.table-head .table-text {
+    color: #d5dde5;
+    background-color: #1b1e24;
+    border-bottom: 4px solid #9ea7af;
+    border-right: 1px solid #343a45;
     font-weight: bold;
-    display: block;
-    text-align: left;
-}
-
-.formulario .usuario-input {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: left;
-    transition: 0.5s;
-    transition-property: border-bottom;
-}
-
-.formulario .usuario-input:hover,
-.formulario .usuario-input:focus,
-.formulario .usuario-input:active {
-    border-bottom: solid 5px #ffffff;
-}
-
-.formulario .usuario-input {
-    border: none;
-    border-bottom: 1px solid #ffffff;
-    background: transparent;
-    outline: none;
-    height: 40px;
-    color: #ffffff;
-    font-size: 18px;
-}
-
-.formulario input[type="submit"] {
-    border: none;
-    outline: none;
-    height: 40px;
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 20px;
-    width: 100%;
-    margin-bottom: 20px;
+    padding: 24px;
     text-align: center;
-    transition: 0.5s;
-    transition-property: background-color, outline;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    vertical-align: middle;
 }
 
-.formulario input[type="submit"]:hover {
-    background-color: #C9ADA7;
-    outline: solid 2px rgb(34, 34, 59);
+.table-head .table-text th:first-child {
+    border-top-left-radius: 10px;
 }
 
-.formulario a {
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 20px;
-    color: darkgrey;
-    display: block;
-    margin: 5px;
+.table-head .table-text th:last-child {
+    border-top-right-radius: 10px;
+    border-right: none;
+}
+
+.table-body tr {
+    border-top: 1px solid #c1c3d1;
+    border-bottom: 1px solid #c1c3d1;
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+.table-body tr:hover td {
+    background-color: #4e5066;
+    color: #fff;
+    border-top: 1px solid #22262e;
+}
+
+.table-body tr:hover td a {
+    background-color: #4e5066;
+    color: #fff;
+}
+
+.table-body tr:first-child {
+    border-top: none;
+}
+
+.table-body tr:last-child {
+    border-bottom: none;
+}
+
+.table-body tr:nth-child(odd) td {
+    background: #ebebeb;
+}
+
+.table-body tr:nth-child(odd):hover td {
+    background: #4e5066;
+}
+
+.table-body tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.table-body tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.table-body .table-content {
+    background-color: #fff;
+    padding: 20px;
     text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 18px;
+    text-shadow: -1px -1px -1px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #c1c3d1;
 }
 
+.table-body .table-content a {
+    text-decoration: none;
+}
+
+.table-body .table-content i {
+    padding: 0 2px;
+}
+
+line-height: 20px;
+color: darkgrey;
+display: block;
+margin: 5px;
+text-align: left;
+
+}
 .formulario a:hover {
     color: #ffffff;
     font-weight: 600;
 }
-
-
-/* Diseño Responsive */
