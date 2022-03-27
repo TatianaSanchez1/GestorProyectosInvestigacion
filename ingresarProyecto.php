@@ -81,7 +81,6 @@ $guardar = $conexion->query($directores);
         <div class="sidebar">
             <div class="info_perfil">
                 <img src="img/perfil.jpg" alt="foto de perfil" class="profile-img">
-                <h4>Administrador</h4>
             </div>
             <a href="ingresarProyecto.php" id="selected"><i class="fa-solid fa-circle-plus"></i><span>Ingresar Proyecto</span></a>
             <a href="buscar_actualizarProyecto.php"><i class="fa-solid fa-pen-to-square"></i><span>Actualizar</span></a>

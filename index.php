@@ -1,9 +1,9 @@
 <?php
-    session_start();
+session_start();
 
-    if (isset($_SESSION['usuario'])) {
-        header("location: ingresarProyecto.php");
-    }
+if (isset($_SESSION['usuario'])) {
+    header("location: ingresarProyecto.php");
+}
 ?>
 
 
@@ -40,7 +40,6 @@
 
             <input type="submit" value="Entrar">
 
-            <a href="recuperarContrasena.html">Has perdido tu contraseña?</a>
         </form>
     </div>
 </body>

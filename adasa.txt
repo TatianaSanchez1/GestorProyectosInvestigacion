@@ -1,3 +1,0 @@
-<td><?php echo $row['descripcion'] ?></td>
-<td><?php echo $row['obj_generales'] ?></td>
-<td><?php echo $row['obj_especificos'] ?></td>

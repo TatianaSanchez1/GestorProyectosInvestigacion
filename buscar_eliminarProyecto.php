@@ -4,7 +4,7 @@ include 'PHP/Conexion_BackEnd.php';
 #Consulta
 $where = "";
 
-if (!empty($_POST)) {   
+if (!empty($_POST)) {
     $valor = $_POST['buscar'];
     $limpiar = $_POST['limpiar'];
 
@@ -15,6 +15,8 @@ if (!empty($_POST)) {
 
 $consulta = "SELECT * FROM proyectos $where";
 $guardar = $conexion->query($consulta);
+
+
 ?>
 
 
@@ -78,7 +80,6 @@ $guardar = $conexion->query($consulta);
         <div class="sidebar">
             <div class="info_perfil">
                 <img src="img/perfil.jpg" alt="foto de perfil" class="profile-img">
-                <h4>Administrador</h4>
             </div>
             <a href="ingresarProyecto.php"><i class="fa-solid fa-circle-plus"></i><span>Ingresar Proyecto</span></a>
             <a href="buscar_actualizarProyecto.php"><i class="fa-solid fa-pen-to-square"></i><span>Actualizar</span></a>
@@ -128,8 +129,20 @@ $guardar = $conexion->query($consulta);
                                     <td class="table-content"><?php echo $row['presupuesto'] ?></td>
                                     <td class="table-content"><?php echo $row['fecha_inicial'] ?></td>
                                     <td class="table-content"><?php echo $row['fecha_final'] ?></td>
-                                    <td class="table-content"><?php echo $row['director'] ?></td>
-                                    <td class="table-content"><a href="eliminarProyecto.php?id_proyecto=<?php echo $row['id_proyecto']?>"><i class="fa-solid fa-delete-left" ></i>Eliminar</a></td>
+                                    <td class="table-content"><?php
+
+                                                                $idDirector = $row['director'];
+                                                                if (!empty($idDirector)) {
+                                                                    $queryDirector = "SELECT nombre_director FROM directores WHERE id_director = $idDirector";
+                                                                    $nombreDirector = $conexion->query($queryDirector);
+                                                                    $nombreDirectorBD = $nombreDirector->fetch_assoc();
+                                                                    echo $nombreDirectorBD['nombre_director'];
+                                                                }
+
+
+                                                                ?></td>
+
+                                    <td class="table-content"><a href="eliminarProyecto.php?id_proyecto=<?php echo $row['id_proyecto'] ?>" onclick="return verify()"><i class="fa-solid fa-delete-left"></i>Eliminar</a></td>
                                 </tr>
 
                             <?php } ?>
@@ -139,15 +152,16 @@ $guardar = $conexion->query($consulta);
                 </div>
             </div>
 
-
-
-
             <script type="text/javascript">
                 $(document).ready(function() {
                     $(".nav_btn").click(function() {
                         $(".responsive_nav_items").toggleClass("active");
                     });
                 });
+
+                function verify() {
+                    return confirm("¿Desea eliminar el archivo?");
+                }
             </script>
         </div>
     </div>
