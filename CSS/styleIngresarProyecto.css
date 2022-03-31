@@ -79,3 +79,12 @@
     margin-top: 30px;
     cursor: pointer;
 }
+
+
+/* Responsive */
+
+@media screen and (max-width:1050px) {
+    .contenedor_general .contenido .formulario .form_input {
+        width: auto;
+    }
+}

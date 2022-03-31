@@ -70,8 +70,7 @@ $guardar = $conexion->query($consulta);
             <a href="buscar_actualizarProyecto.php"><i class="fa-solid fa-pen-to-square"></i><span>Actualizar</span></a>
             <a href="buscar_eliminarProyecto.php"><i class="fa-solid fa-ban"></i><span>Eliminar</span></a>
             <a href="listarProyectos.php" id="selected"><i class="fa-solid fa-list"></i><span>Ver lista</span></a>
-            <a href="#"><i class="fa-solid fa-info-circle"></i><span>About</span></a>
-            <a href="#"><i class="fa-solid fa-sliders-h"></i><span>Settings</span></a>
+
         </div>
     </div>
 
@@ -85,8 +84,7 @@ $guardar = $conexion->query($consulta);
             <a href="buscar_actualizarProyecto.php"><i class="fa-solid fa-pen-to-square"></i><span>Actualizar</span></a>
             <a href="buscar_eliminarProyecto.php" id="selected"><i class="fa-solid fa-ban"></i><span>Eliminar</span></a>
             <a href="listarProyectos.php"><i class="fa-solid fa-list"></i><span>Ver lista</span></a>
-            <a href="#"><i class="fa-solid fa-info-circle"></i><span>About</span></a>
-            <a href="#"><i class="fa-solid fa-sliders-h"></i><span>Settings</span></a>
+
         </div>
 
         <div class="contenido">

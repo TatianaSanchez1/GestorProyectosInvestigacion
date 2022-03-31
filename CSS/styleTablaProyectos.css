@@ -93,7 +93,6 @@
 .table-body .table-content {
     background-color: #fff;
     padding: 20px;
-    text-align: left;
     vertical-align: middle;
     font-weight: 300;
     font-size: 18px;
@@ -140,14 +139,16 @@
         border-bottom: 1px solid #ddd;
         text-align: right;
     }
+    .table td a {
+        align-self: center;
+    }
     .table td:last-child {
         border-bottom: 0px;
     }
-    /* .table td::before {
+    .table td::before {
         content: attr(data-label);
         font-weight: bold;
         text-transform: uppercase;
         float: left;
-
-    } */
+    }
 }
