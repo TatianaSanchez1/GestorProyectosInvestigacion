@@ -109,9 +109,6 @@ $guardar = $conexion->query($consulta);
                         <thead class="table-head">
                             <th class="table-text">Id</th>
                             <th class="table-text">Nombre</th>
-                            <!-- <th class="table-text">Descripción</th> -->
-                            <!-- <th class="table-text">Obj. Generales</th>
-                        <th class="table-text">Obj. Específicos</th> -->
                             <th class="table-text">Presupuesto</th>
                             <th class="table-text">Fecha Inicial</th>
                             <th class="table-text">Fecha Final</th>
@@ -124,23 +121,24 @@ $guardar = $conexion->query($consulta);
                             <?php while ($row = $guardar->fetch_assoc()) { ?>
 
                                 <tr>
-                                    <td class="table-content"><?php echo $row['id_proyecto'] ?></td>
-                                    <td class="table-content"><?php echo $row['nombre'] ?></td>
-                                    <td class="table-content"><?php echo $row['presupuesto'] ?></td>
-                                    <td class="table-content"><?php echo $row['fecha_inicial'] ?></td>
-                                    <td class="table-content"><?php echo $row['fecha_final'] ?></td>
-                                    <td class="table-content"><?php
+                                    <td class="table-content" data-label="id"><?php echo $row['id_proyecto'] ?></td>
+                                    <td class="table-content" data-label="nombre"><?php echo $row['nombre'] ?></td>
+                                    <td class="table-content" data-label="presupuesto"><?php echo $row['presupuesto'] ?></td>
+                                    <td class="table-content" data-label="fecha_inicial"><?php echo $row['fecha_inicial'] ?></td>
+                                    <td class="table-content" data-label="fecha_final"><?php echo $row['fecha_final'] ?></td>
+                                    <td class="table-content" data-label="director">
+                                        <?php
 
-                                                                $idDirector = $row['director'];
-                                                                if (!empty($idDirector)) {
-                                                                    $queryDirector = "SELECT nombre_director FROM directores WHERE id_director = $idDirector";
-                                                                    $nombreDirector = $conexion->query($queryDirector);
-                                                                    $nombreDirectorBD = $nombreDirector->fetch_assoc();
-                                                                    echo $nombreDirectorBD['nombre_director'];
-                                                                }
+                                        $idDirector = $row['director'];
+                                        if (!empty($idDirector)) {
+                                            $queryDirector = "SELECT nombre_director FROM directores WHERE id_director = $idDirector";
+                                            $nombreDirector = $conexion->query($queryDirector);
+                                            $nombreDirectorBD = $nombreDirector->fetch_assoc();
+                                            echo $nombreDirectorBD['nombre_director'];
+                                        }
 
-
-                                                                ?></td>
+                                        ?>
+                                    </td>
 
                                     <td class="table-content"><a href="eliminarProyecto.php?id_proyecto=<?php echo $row['id_proyecto'] ?>" onclick="return verify()"><i class="fa-solid fa-delete-left"></i>Eliminar</a></td>
                                 </tr>

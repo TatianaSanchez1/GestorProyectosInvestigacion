@@ -26,13 +26,12 @@
     border: none;
     border-radius: 10px;
     width: 300px;
-    margin: auto;
     padding: 10px 20px;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+    margin: auto;
     margin-bottom: 20px;
-    margin-left: 110px;
     transition: 0.3s;
     transition-property: background-color;
 }
@@ -47,4 +46,11 @@
 
 .contenido .tabla-listarProyectos .btn_limpiar:hover {
     background-color: rgb(184, 37, 37);
+}
+
+@media screen and (max-width:1000px) {
+    .contenido .tabla-listarProyectos .btn_buscar,
+    .contenido .tabla-listarProyectos .btn_limpiar {
+        margin: 10px 0px;
+    }
 }

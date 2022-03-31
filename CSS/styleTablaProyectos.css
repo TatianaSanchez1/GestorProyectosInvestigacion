@@ -2,7 +2,6 @@
     box-sizing: border-box;
     padding: 20px 50px 50px 50px;
     background-color: #ffffff;
-    display: flex;
     display: block;
 }
 
@@ -23,6 +22,7 @@
     padding: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     animation: float 5s infinite;
+    table-layout: fixed;
 }
 
 .table-head .table-text {
@@ -107,4 +107,47 @@
 
 .table-body .table-content i {
     padding: 0 2px;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width:1000px) {
+    .contenedor_general {
+        padding: 5px;
+    }
+    .contenedor_general .contenido .tabla-listarProyectos .titulo-tabla {
+        font-size: 22px;
+    }
+    .table {
+        border: 9px;
+        width: 100%;
+    }
+    .table thead {
+        display: none;
+    }
+    .table tr {
+        margin-bottom: 8px;
+        border-bottom: 4px solid #ddd;
+        display: block;
+    }
+    .table th,
+    .table td {
+        font-size: 12px;
+    }
+    .table td {
+        display: block;
+        border-bottom: 1px solid #ddd;
+        text-align: right;
+    }
+    .table td:last-child {
+        border-bottom: 0px;
+    }
+    /* .table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+
+    } */
 }
